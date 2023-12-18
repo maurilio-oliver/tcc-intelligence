@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SuperSim</title>
+
+   
+
+</head>
+<body class="test" style="box-sizing: border-box;margin: 0;font-family: sans-serif;color: #333333;background-color: #E0E0E0;">
+    <style>
+        .hightLight {
+            color: orange ;padding-top: 30px;font-weight: bold;font-size: 18px;text-decoration: none;text-align: justify;
+        }
+        .summary {
+            font-size: 18px;font-weight: bold;
+        }
+    </style>
+    <div style="
+    background-color: #efefef;
+    margin: 0px;
+    padding: 20px;
+    min-width: 650px;
+    ">
+    <table align="center" border="0" cellspacing="0" style="background-color: #E0E0E0; width: 600px;">
+        <!-- SNIPPET : BEGIN -->
+        <tr id="email-content" style="background-color: white;width: 600px;">
+            <td style="background-color: white;width: 600px;">
+                <p class="snippet" style="margin: 0;font-size: 16px;line-height: 26px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;display: none;background-color: #E0E0E0;">
+                    VEM DINHEIRO, VEM!
+                </p>
+            </td>
+        </tr>
+        <!-- SNIPPET : END -->
+        <!-- HEADER -->
+        <tr style="background-color: white;width: 600px;"> 
+            <td class="header" style="background-color: white;width: 600px;padding: 16px;border-bottom: 1px solid orange;">
+                <img src="https://s3.amazonaws.com/image.communication.srv.supersim.com.br/header_logo_supersim.png?skipShortener" alt="" srcset="">
+            </td>
+        </tr>
+        <!-- MAIN CONTENT -->
+        <tr style="background-color: white;width: 600px;"> 
+            <td class="main-content" style="background-color: white;width: 600px;padding: 0px 30px 0px 30px;text-align: justify;max-width: 600px;">
+                <span class="title" style="font-weight: bold;color: orange;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 22px;padding-left: 40px;padding-top: 20px;">
+                    VAMOS DE DINHEIRO NO BOLSO HOJE!
+                </span>
+                <span class="emoji" style="font-size: 24px;">
+                    &#129321;
+                </span>
+            </td>
+        </tr>
+        <tr style="background-color: white;width: 600px;"> 
+            <td class="main-content" style="background-color: white;width: 600px;padding: 0px 30px 0px 30px;text-align: justify;max-width: 600px;">
+                <p style="margin: 0;font-size: 18px;line-height: 25px;padding-bottom: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;padding-right: 40px;padding-left: 40px;padding-top: 20px;">
+                   
+                    Arrumamos um desconto <b>EXCLUSIVO</b> para tornar seu retorno ainda melhor! Clique agora e comece a economizar &#128521;
+                </p>
+            </td>
+        </tr>
+        <!-- CONTRACT BRIEF -->
+        <tr style="background-color: white;width: 600px;">
+            <td class="installment" align="center" style="background-color: white;width: 600px;border-radius: 1px;border: 2px dashed #E0E0E0;padding: 30px;">
+                <p style="margin: 0;font-size: 20px;line-height: 26px;padding-top: 20px;color: #010E39;"><b>RESUMO DO CONTRATO:</b></p>
+                <br>
+                    <span class="highlight-installment hightLight" >Valor do empréstimo:</span> <span class="summary">R$ ${message.parameters.get('loan_amount')}</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Número de parcelas:</span> <span class="summary">${message.parameters.get('loan_installments_quantity')} parcelas</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Valor das parcelas:</span> <span class="summary">R$ ${message.parameters.get('loan_installment_value')}</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Taxa única de cadastro (TAC):</span> <span class="summary">R$ ${message.parameters.get('loanOneTimeFee')}</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Data da primeira parcela:</span> <span class="summary">${message.parameters.get('loan_repayments_next_installment_due_date')}</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Data da última parcela:</span> <span class="summary">${message.parameters.get('loanRepaymentsLastInstallmentDueDate')}</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Juros:</span> <span class="summary">${message.parameters.get('loanMonthlyInterestRate')} % ao mês</span>
+                    <br>
+                    <span class="highlight-installment hightLight">IOF:</span> <span class="summary">R$ ${message.parameters.get('loanTaxes')}</span>
+                    <br>
+                    <span class="highlight-installment hightLight">Custo Efetivo Total (CET):</span> <span class="summary">${message.parameters.get('loanEffectiveMonthlyInterestRate')} % ao mês</span>
+                    <br><br><br>
+                    <a href="https://www.supersim.com.br/cliente/solicitacao/contrato?user=${message.parameters.person.id}&tempToken=${message.parameters.customerTempToken}&cupom=euvolteipraficar&utm_campaign=${message.campaignCode}&autoSign=false" target="_blank" style="text-decoration: none;">
+                        <span class="button" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 20px;font-weight: bold;padding-top: 20px;padding-bottom: 20px;padding-right: 20px;padding-left: 20px;background: linear-gradient(128.41deg, #FDAC17 10.7%, #FF4F50 93.03%);color: #FFFFFF;text-align: center;border-radius: 50px;">
+                            QUERO ASSINAR JÁ!
+                        </span>
+                    </a>
+                    <br><br><br>
+                    <span class="tec" style="font-size: 16px;text-decoration-color: none;">Ao continuar, você aceita os nossos Termos e Condições.</span>
+                    <br><br>
+                                
+            </td>
+        </tr>
+        <tr class="v-spacing" style="background-color: white;width: 600px;height: 32px;">
+
+        </tr>
+        <!-- FOOTER -->
+        <tr style="background-color: white;width: 600px;">
+            <td align="center" class="team" style="background-color: #EFEFEF;width: 600px;font-family: Arial, Helvetica, sans-serif;color: #757575;font-size: 14px;padding-top: 10px;">
+                <br>
+                <a href="https://www.facebook.com/supersimoficial" style="text-decoration: none;">
+                    <img class="icon" src="https://s3.amazonaws.com/image.communication.srv.supersim.com.br/facebook_logo_gray.png?skipShortener" alt="Siga o Facebook da SuperSim" srcset="">
+                </a>
+                <a href="https://www.youtube.com/c/SuperSimEmpr%C3%A9stimoOnlineOficial" style="text-decoration: none;">
+                    <img class="icon" src="https://s3.amazonaws.com/image.communication.srv.supersim.com.br/youtube_logo_gray.png?skipShortener" alt="Inscreva-se no canal da SuperSim no Youtube" srcset="">
+                </a>
+                <a href="https://www.instagram.com/supersimoficial/" style="text-decoration: none;">
+                    <img class="icon" src="https://s3.amazonaws.com/image.communication.srv.supersim.com.br/instagram_logo_gray.png?skipShortener" alt="Siga o Instagram da SuperSim" srcset="">
+                </a>
+                <br><br>
+                <span class="highlight-2" style="font-weight: bold;font-size: 15px;text-decoration: none;line-height: 20px;">
+                    Todas as solicitações estão sujeitas a análise de crédito.
+                </span>
+                <br><br>
+                    Ao acessar nossa plataforma você concorda com os <a class="terms-conditions" target="_blank" href="https://www.supersim.com.br/termos/condicoes/" style="text-decoration: underline;font-size: 14px;text-decoration-color: none;color: orange;background-color: #EFEFEF;">Termos & Condições</a>.
+                <br><br>
+                <span class="legal-text" style="font-size: 13px;text-decoration: none;line-height: 20px;">
+                    @2022 Copyright - Todos os direitos reservados.
+                    <br>
+                    SuperSim Análise de Dados e Correspondente Bancário LTDA 
+                    <br>
+                    CNPJ: 33.030.944/0001-60 | Av. Nove de Julho, 5143 - Conj 121
+                    <br>Jardim Paulista - São Paulo - SP - 01407-200
+                </span>
+            </td>
+        </tr>
+        <tr style="background-color: white;width: 600px;">
+            <td align="center" class="privacy-policy" style="background-color: #EFEFEF;width: 600px;font-size: 13px;text-decoration-color: none;text-decoration: underline;color: darkgray;padding: 10px;padding-bottom: 68px;"> 
+                <a class="privacy-policy" target="_blank" href="https://www.supersim.com.br/termos/privacidade/" style="text-decoration: underline;font-size: 13px;text-decoration-color: none;color: darkgray;background-color: #EFEFEF;padding: 10px;padding-bottom: 68px;">
+                    Política de privacidade
+                </a>
+                <a align="center" class="optout" target="_blank" href="https://${message.parameters.customerPortalDomain}/cliente/preferencias-mensagens?user=${message.parameters.person.id}&tempToken=${message.parameters.customerTempToken}" style="text-decoration: underline;font-size: 13px;text-decoration-color: none;color: darkgray;background-color: #EFEFEF;padding: 10px;">
+                    Cancelar Assinatura
+                </a>
+            </td>
+        </tr>
+    </table>
+    <!-- FOOTER : ENDS -->
+</div></body>
+</html>
